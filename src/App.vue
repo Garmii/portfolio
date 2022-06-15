@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="main">
     <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
@@ -31,6 +31,16 @@
         <span class="mr-2">Latest Release</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
+
+      <v-spacer></v-spacer>
+
+      <v-switch
+        v-model="$vuetify.theme.dark"
+        hint="This toggles the global state of the Vuetify theme"
+        inset
+        label="Vuetify Theme Dark"
+        persistent-hint
+      ></v-switch>
     </v-app-bar>
 
     <v-main>
