@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 import { Quasar } from "quasar";
 import quasarUserOptions from "./quasar-user-options";
+import "animate.css";
 
 import "vue-fullpage.js/dist/style.css";
 import VueFullPage from "vue-fullpage.js";

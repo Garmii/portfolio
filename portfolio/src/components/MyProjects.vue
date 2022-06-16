@@ -10,12 +10,14 @@
       :key="index"
     >
       <q-card-section>
-        <div class="text-h6">{{ items[index].name }}</div>
+        <div class="text-h6 text-center">{{ items[index].name }}</div>
       </q-card-section>
 
       <q-separator dark inset />
 
-      <q-card-section> {{ items[index].description }} </q-card-section>
+      <q-card-section class="text-center">
+        {{ items[index].description }}
+      </q-card-section>
     </q-card>
   </div>
 </template>
@@ -25,13 +27,7 @@ import datos from "@/assets/Projects.json";
 
 export default {
   name: "MyProjects",
-  setup() {
-    let hover = false;
-
-    return {
-      hover,
-    };
-  },
+  setup() {},
   computed: {
     items() {
       return datos.map((item) => {
@@ -50,10 +46,13 @@ export default {
 }
 .my-card {
   width: 100%;
-  max-width: 250px;
+  max-width: 300px;
   margin-right: 2em;
   margin-left: 2em;
   margin-bottom: 2em;
+}
+.my-card:hover {
+  animation: pulse 0.3s;
 }
 .card-container {
   justify-content: center;
