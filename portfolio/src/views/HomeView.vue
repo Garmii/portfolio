@@ -6,25 +6,32 @@
       :skip-init="true"
       id="fullpage"
     >
-      <div class="section">First section ...</div>
-      <div class="section">Second section ...</div>
-      <div class="section">Third section ...</div>
+      <div class="section"><AboutMe /></div>
+      <div class="section"><MyProjects /></div>
+      <div class="section"><!--Redes sociales --></div>
     </full-page>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-//import HelloWorld from "@/components/HelloWorld.vue";
+import AboutMe from "@/components/AboutMe.vue";
+import MyProjects from "@/components/MyProjects.vue";
 
 export default {
   name: "HomeView",
   components: {
-    //HelloWorld,
+    AboutMe,
+    MyProjects,
   },
   data: () => ({
     options: {
-      sectionsColor: ["#41b883", "#ff5f45", "#0798ec"],
+      sectionsColor: ["#59C173", "#a17fe0", "#F27121", "#FFFF00"],
+      scrollingSpeed: 800,
+      loopTop: true,
+      loopBottom: true,
+      navigation: true,
+      verticalCentered: false,
     },
   }),
   methods: {
