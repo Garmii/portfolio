@@ -1,8 +1,10 @@
 <template>
-  <div class="card-container">
+  <p class="text-h4 text-center" style="padding-top: 2em">
+    Here's an example of some projects
+  </p>
+  <div class="card-container row wrap">
     <q-card
       dark
-      bordered
       class="bg-grey-9 my-card"
       v-for="(item, index) in items"
       :key="index"
@@ -23,7 +25,13 @@ import datos from "@/assets/Projects.json";
 
 export default {
   name: "MyProjects",
-  setup() {},
+  setup() {
+    let hover = false;
+
+    return {
+      hover,
+    };
+  },
   computed: {
     items() {
       return datos.map((item) => {
@@ -35,16 +43,20 @@ export default {
 </script>
 
 <style>
+.title {
+  width: 100%;
+  justify-content: center;
+  padding: 2em;
+}
 .my-card {
   width: 100%;
   max-width: 250px;
   margin-right: 2em;
   margin-left: 2em;
+  margin-bottom: 2em;
 }
 .card-container {
-  flex-direction: row;
-  display: flex;
   justify-content: center;
-  padding: 2em;
+  padding: 6em;
 }
 </style>

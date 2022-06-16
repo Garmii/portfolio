@@ -26,7 +26,7 @@ export default {
   },
   data: () => ({
     options: {
-      sectionsColor: ["#59C173", "#a17fe0", "#F27121", "#FFFF00"],
+      sectionsColor: ["#C6FFDD", "#FBD786", "#f7797d"],
       scrollingSpeed: 800,
       loopTop: true,
       loopBottom: true,
