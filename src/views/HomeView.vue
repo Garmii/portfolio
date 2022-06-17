@@ -1,46 +1,16 @@
 <template>
-  <div>
-    <full-page
-      ref="fullpage"
-      :options="options"
-      :skip-init="true"
-      id="fullpage"
-    >
-      <div class="section"><AboutMe /></div>
-      <div class="section"><MyProjects /></div>
-      <div class="section"><!--Redes sociales --></div>
-    </full-page>
-  </div>
+  <BriefIntro />
 </template>
 
 <script>
 // @ is an alias to /src
-import AboutMe from "@/components/AboutMe.vue";
-import MyProjects from "@/components/MyProjects.vue";
+import BriefIntro from "@/components/BriefIntro.vue";
 
 export default {
   name: "HomeView",
   components: {
-    AboutMe,
-    MyProjects,
+    BriefIntro,
   },
-  data: () => ({
-    options: {
-      sectionsColor: ["#C6FFDD", "#FBD786", "#f7797d"],
-      scrollingSpeed: 800,
-      loopTop: true,
-      loopBottom: true,
-      navigation: true,
-      verticalCentered: false,
-    },
-  }),
-  methods: {
-    componentsReady() {
-      this.$refs.fullpage.init();
-    },
-  },
-  mounted() {
-    this.componentsReady();
-  },
+  data: () => ({}),
 };
 </script>

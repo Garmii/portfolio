@@ -1,15 +1,15 @@
 <template>
-  <AboutMe />
+  <MyProjects />
 </template>
 
 <script>
 // @ is an alias to /src
-import AboutMe from "@/components/AboutMe.vue";
+import MyProjects from "@/components/MyProjects.vue";
 
 export default {
-  name: "AboutView",
+  name: "ProjectsView",
   components: {
-    AboutMe,
+    MyProjects,
   },
   data: () => ({}),
 };
