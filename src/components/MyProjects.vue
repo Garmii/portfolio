@@ -4,10 +4,11 @@
   </p>
   <div class="card-container row wrap">
     <q-card
-      dark
-      class="bg-grey-9 my-card"
+      v-ripple
+      class="bg-warning my-card"
       v-for="(item, index) in items"
       :key="index"
+      @click="goTo(items[index].url)"
     >
       <q-card-section>
         <div class="text-h6 text-center">{{ items[index].name }}</div>
@@ -27,7 +28,14 @@ import datos from "@/assets/Projects.json";
 
 export default {
   name: "MyProjects",
-  setup() {},
+  setup() {
+    const goTo = (link) => {
+      window.open(link);
+    };
+    return {
+      goTo,
+    };
+  },
   computed: {
     items() {
       return datos.map((item) => {

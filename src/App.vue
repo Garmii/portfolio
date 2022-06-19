@@ -39,7 +39,7 @@ export default {
     options: {
       anchors: ["/", "myProjects", "aboutMe"],
       menu: ".myMenu",
-      sectionsColor: ["#C6FFDD", "#FBD786", "#f7797d"],
+      sectionsColor: ["#26C6DA", "#66BB6A", "#FF7043"],
       scrollingSpeed: 800,
       loopTop: true,
       loopBottom: true,
